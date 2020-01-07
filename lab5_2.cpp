@@ -1,5 +1,31 @@
 #include<iostream>
+#include<string>
 using namespace std;
+
+
+
+string mixText(string x,string y){
+	string S="";
+	int st1=x.size(),st2=y.size(),count=0;
+
+	if (st1==st2)
+	{
+		while (count<=y.size()-1)
+		{
+			S=S+x[count]  + y[count] ;
+			count=count+1;
+		}
+		
+		return S;
+	}
+	else
+	{
+		return "E";
+	}
+
+}
+
+
 
 
 

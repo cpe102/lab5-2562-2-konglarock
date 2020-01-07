@@ -7,19 +7,33 @@ int main(){
 	cin >> N;
 	
 	string name[N];
-	int age[N];
-	cout << "Name of student = ";
-	cout << "Age of student = ";
+	int age[N], i=0 ;
+	while (i<N)
+	{
+		cout << "Name of student "<< i+1 << " = "; 
+		cin >> name[i];
+		cout << "Age of student "<< i+1 <<" = ";
+		cin >> age[i];
+		i++; 
+	}
+
+	int key,count=0; 
 	
-	int key;
 	cout << "--------------------------------------\n";
 	cout << "Enter an age to search: ";
 	cin >> key;
 	cout << "--------------------------------------\n";
-	
-
-	
+	while (count<N)
+	{
+		if (key==age[count])
+		{
+			cout << name[count]<<"\n";
+		}
+		
+		count++;
+	}
 	cout << "--------------------------------------\n";
 	
+
 	return 0;
 }
